@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 
-public class EmpresaProfile : Profile
+public class CepProfile : Profile
 {
-    public EmpresaProfile()
+    public CepProfile()
     {
-        CreateMap<CnpjResponseDTO, Empresa>();
+        CreateMap<CepDTO, Cep>();
     }
 }
