@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-public class CnpjResponse
+public class Empresa
 {
     [JsonPropertyName("uf")]
     public string Uf { get; set; }
@@ -14,6 +15,7 @@ public class CnpjResponse
     public List<Qsa> Qsa { get; set; }
 
     [JsonPropertyName("cnpj")]
+    [Key]
     public string Cnpj { get; set; }
 
     [JsonPropertyName("pais")]
@@ -154,6 +156,8 @@ public class CnpjResponse
 
 public class Qsa
 {
+    public int id { get; set; }
+
     [JsonPropertyName("pais")]
     public string Pais { get; set; }
 
@@ -199,6 +203,8 @@ public class Qsa
 
 public class CnaeSecundario
 {
+    public int id { get; set; }
+
     [JsonPropertyName("codigo")]
     public long Codigo { get; set; }
 
@@ -208,6 +214,8 @@ public class CnaeSecundario
 
 public class RegimeTributario
 {
+    public int id { get; set; }
+
     [JsonPropertyName("ano")]
     public int Ano { get; set; }
 
