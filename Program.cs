@@ -129,6 +129,7 @@ internal class Program
         var config = new MapperConfiguration(cfg =>
         {
             cfg.AddProfile<EmpresaProfile>();
+            cfg.AddProfile<CepProfile>();
         }, loggerFactory);
 
         mapper = config.CreateMapper();
